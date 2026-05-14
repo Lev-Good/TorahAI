@@ -31,10 +31,16 @@
             <ul class="nav-menu">
                 <li><a href="#hero" class="nav-link active">ראשי</a></li>
                 <li><a href="#features" class="nav-link">תכונות</a></li>
+                <li><a href="#pricing" class="nav-link">רישיון ומחירים</a></li>
                 <li><a href="#guide" class="nav-link">מדריך התקנה</a></li>
                 <li><a href="#download" class="nav-link">הורדות</a></li>
             </ul>
-            <a href="#download" class="btn-download-nav">הורד עכשיו</a>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-toggle-btn" title="החלף מצב עיצוב (בהיר/כהה)">
+                    <i data-lucide="sun"></i>
+                </button>
+                <a href="#download" class="btn-download-nav">הורד עכשיו</a>
+            </div>
         </div>
     </nav>
 
@@ -115,13 +121,13 @@
 
             <!-- Feature 4 -->
             <div class="glass-card reveal" style="transition-delay: 0.3s;">
-                <div class="feat-icon"><i data-lucide="messages-square"></i></div>
-                <h3 class="feat-title">שו"ת מבוסס הקשר</h3>
-                <p class="feat-desc">סמנו קטע מתוך המסמך ושאלו שאלות. החברותא יענה לכם, יסביר, ימצא פתרונות או יפתח סוגיות קשות.</p>
+                <div class="feat-icon"><i data-lucide="book-open"></i></div>
+                <h3 class="feat-title">מילון אישי והתאמה אישית</h3>
+                <p class="feat-desc">למדו את הבינה המלאכותית את הכללים והסגנון האישיים שלכם באמצעות מילון מונחים וראשי תיבות ייחודי.</p>
                 <ul class="feat-list">
-                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> תמיכה במיטב המודלים (Gemini, Claude...)</li>
-                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> חשיבה תורנית מותאמת לפי מילון</li>
-                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> שימור היסטוריית שיחה</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> חיבור קל לגיליון Google Sheets</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> הגדרת כללי עריכה פרטיים במחשב</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> הבנת ההקשר הסגנוני הייחודי לכם</li>
                 </ul>
             </div>
 
@@ -147,6 +153,141 @@
                     <li class="feat-list-item"><i data-lucide="check-circle-2"></i> כפתורי 'קבל והבא' לתזרים נוח</li>
                     <li class="feat-list-item"><i data-lucide="check-circle-2"></i> עיצוב מותאם אישית ומצב קומפקטי</li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Section -->
+    <section id="live-demo" class="section demo-section">
+        <div class="section-header reveal">
+            <span class="section-tag">הדמיה חיה</span>
+            <h2 class="section-title">לראות את הקסם בפעולה</h2>
+            <p class="section-subtitle">צפו כיצד התוסף של TorahAI סורק, משפר ומעשיר טקסטים תורניים ישירות בתוך סביבת העבודה המוכרת שלכם בוורד.</p>
+        </div>
+
+        <div class="demo-grid">
+            <!-- Menu Tab Selector (RTL: Right column) -->
+            <div class="demo-menu reveal">
+                <!-- Tab 1: Proofreading -->
+                <div class="demo-tab active" data-demo="proof">
+                    <div class="demo-tab-icon"><i data-lucide="spell-check"></i></div>
+                    <div>
+                        <h4 class="demo-tab-title">הגהה ותיקון שגיאות</h4>
+                        <p class="demo-tab-desc">הבינה מזהה שגיאות כתיב, החלפות אותיות ושיבושים בהקשר ההלכתי/תורני, ומציעה חלופות מדויקות.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Punctuation -->
+                <div class="demo-tab" data-demo="punct">
+                    <div class="demo-tab-icon"><i data-lucide="pilcrow"></i></div>
+                    <div>
+                        <h4 class="demo-tab-title">פיסוק וחלוקת פסקאות</h4>
+                        <p class="demo-tab-desc">הפיכת טקסט רציף, דחוס ובלתי קריא לטקסט מפוסק, מאוורר ומחולק לוגית לנוחות מרבית של הקורא.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Source Discovery -->
+                <div class="demo-tab" data-demo="source">
+                    <div class="demo-tab-icon"><i data-lucide="link-2"></i></div>
+                    <div>
+                        <h4 class="demo-tab-title">איתור מקורות אוטומטי</h4>
+                        <p class="demo-tab-desc">סריקת טקסט, זיהוי מיידי של ציטוטים תנ"כיים או תלמודיים, והטמעת מראה מקום מדויק במקום הנכון.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simulator Device Window (RTL: Left column) -->
+            <div class="reveal" style="transition-delay: 0.2s;">
+                <div class="simulator-window">
+                    <div class="simulator-header">
+                        <div class="sim-title-bar">
+                            <i data-lucide="file-text" style="width: 14px; opacity: 0.7; display: inline-block; vertical-align: middle;"></i> Document1.docx - Word
+                        </div>
+                        <div class="sim-window-controls">
+                            <div class="sim-dot"></div>
+                            <div class="sim-dot"></div>
+                            <div class="sim-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="sim-workspace">
+                        <!-- Simulator Add-in Sidebar (Rightmost inside simulator in RTL) -->
+                        <div class="sim-sidebar">
+                            <div class="sim-sidebar-header">
+                                <img src="assets/logo.png" alt="TorahAI" class="sim-sidebar-logo">
+                                <span class="sim-sidebar-title">TorahAI Add-in</span>
+                            </div>
+                            <div id="sim-sidebar-content" class="sim-sidebar-content">
+                                <!-- Loaded by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Simulator Word Doc (Remaining space) -->
+                        <div class="sim-doc-panel">
+                            <div id="sim-page-content" class="sim-page">
+                                <!-- Loaded by JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing/Licensing Section -->
+    <section id="pricing" class="section">
+        <div class="section-header reveal">
+            <span class="section-tag">מחירים ורישיון</span>
+            <h2 class="section-title">שימוש גמיש ומותאם עבורכם</h2>
+            <p class="section-subtitle">אנו מאמינים שכל כותב תורני צריך ליהנות מטכנולוגיה מתקדמת. חלק מכלי התוסף חינמיים לתמיד, וגרסת ה-PRO זמינה להתנסות מלאה ללא עלות.</p>
+        </div>
+
+        <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); max-width: 900px; margin: 0 auto;">
+            <!-- Free Plan -->
+            <div class="glass-card reveal" style="border-top: 4px solid var(--text-muted);">
+                <h3 class="feat-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">כלים בסיסיים</h3>
+                <div style="font-size: 2.5rem; font-weight: 900; color: var(--text-bright); margin-bottom: 1.5rem;">חינם <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">לתמיד</span></div>
+                <p class="feat-desc">מגוון כלים הפועלים מקומית ללא צורך במנוע בינה מלאכותית ענן.</p>
+                <ul class="feat-list" style="margin-bottom: 2rem;">
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> חיבור למאגר זית ואוצריא המקומיים</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> קישור מלא למנוע ה-Bridge</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> סייר אוצר הספרים (טקסטים מקומיים)</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> תמיכה במילון אישי מקומי</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2"></i> מנגנון תמלול שיעורים מרובה-שלבים</li>
+                </ul>
+            </div>
+
+            <!-- PRO Plan -->
+            <div class="glass-card reveal" style="border: 1px solid var(--accent-primary); border-top: 4px solid var(--accent-primary); background: radial-gradient(circle at top, rgba(99, 102, 241, 0.1), var(--bg-card)); box-shadow: 0 15px 30px rgba(99, 102, 241, 0.15);">
+                <div style="position: absolute; top: 1rem; left: 1rem; background: var(--accent-primary); color: white; font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.75rem; border-radius: 50px;">מומלץ ביותר</div>
+                <h3 class="feat-title" style="font-size: 1.8rem; margin-bottom: 0.5rem;">גרסת ה-PRO המלאה</h3>
+                <div style="font-size: 2.5rem; font-weight: 900; color: var(--text-bright); margin-bottom: 1.5rem;">החל מ-PRO <span style="font-size: 1rem; color: var(--text-muted); font-weight: normal;">(בתשלום)</span></div>
+                <p class="feat-desc">גישה מלאה לכל כלי ה-AI החכמים לסריקה, שכתוב, הגהה ותמלול מדויק.</p>
+                <ul class="feat-list" style="margin-bottom: 2rem;">
+                    <li class="feat-list-item"><i data-lucide="check-circle-2" style="color: var(--accent-primary);"></i> הגהה, פיסוק, ניקוד ושכתוב AI</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2" style="color: var(--accent-primary);"></i> איתור מקורות וסריקת ספריית ספריא</li>
+                    <li class="feat-list-item"><i data-lucide="check-circle-2" style="color: var(--accent-primary);"></i> יצירת מפתחות מקורות ועניינים חכמים</li>
+                </ul>
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; text-align: center; border: 1px dashed rgba(255,255,255,0.1);">
+                    <span style="color: var(--accent-gold); font-weight: 800; font-size: 0.9rem; display: block;"><i data-lucide="gift" style="display: inline; vertical-align: middle; width: 16px;"></i> גרסת ניסיון חינם ל-48 שעות!</span>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);">אין צורך בכרטיס אשראי - פשוט מפעילים ומתחילים.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Guide -->
+        <div class="warning-box reveal" style="background: rgba(99, 102, 241, 0.05); border: 1px solid rgba(99, 102, 241, 0.2); margin-top: 3rem; max-width: 850px; text-align: right;">
+            <i data-lucide="key" style="color: var(--accent-primary); flex-shrink: 0;"></i>
+            <div>
+                <h4 style="color: var(--text-bright); margin-bottom: 0.5rem; font-weight: 700;">🔑 איך נרשמים ומפעילים את גרסת הניסיון?</h4>
+                <p style="color: var(--text-main); margin-bottom: 0.5rem;">תהליך הרישום מתבצע <strong>ישירות מתוך התוסף בוורד</strong> בצורה סופר-פשוטה:</p>
+                <ol style="padding-right: 1.5rem; font-size: 0.9rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 4px;">
+                    <li>1. פתחו את התוסף בוורד (לאחר ביצוע שלבי ההתקנה מטה).</li>
+                    <li>2. בחלון שנפתח ויבקש רישיון, הקלידו בתיבת הטקסט את <strong>כתובת האימייל שלכם</strong>.</li>
+                    <li>3. לחצו על הכפתור הירוק: <strong>"הפעל גרסת ניסיון (48 שעות)"</strong>.</li>
+                    <li>4. המערכת תאשר אתכם מיידית ותוכלו להשתמש בכל הפונקציות של גרסת ה-PRO למשך יומיים שלמים בחינם!</li>
+                </ol>
             </div>
         </div>
     </section>
@@ -245,8 +386,9 @@
                     <div class="dl-icon"><i data-lucide="terminal"></i></div>
                     <h4 class="dl-title">מנוע המאגרים (Bridge)</h4>
                     <p class="dl-info">מנוע שקט לקישור מאגרי תורה מקומיים במחשב שלכם.</p>
-                    <a href="downloads/TorahAIBridge 1.0.0.exe" class="btn-dl" download>
-                        הורד Bridge.exe <i data-lucide="download"></i>
+                    <!-- הדבק כאן למטה את קישור ה-Google Drive של קובץ ה-EXE במקום ה-PLACEHOLDER -->
+                    <a href="PASTE_YOUR_GOOGLE_DRIVE_LINK_HERE" class="btn-dl" target="_blank">
+                        הורד Bridge.exe <i data-lucide="external-link"></i>
                     </a>
                 </div>
             </div>
@@ -268,6 +410,7 @@
             <ul class="footer-links">
                 <li class="footer-link"><a href="#hero">ראשי</a></li>
                 <li class="footer-link"><a href="#features">תכונות</a></li>
+                <li class="footer-link"><a href="#pricing">רישיון</a></li>
                 <li class="footer-link"><a href="#guide">מדריך</a></li>
                 <li class="footer-link"><a href="#download">הורדות</a></li>
             </ul>
@@ -279,6 +422,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=2"></script>
 </body>
 </html>
